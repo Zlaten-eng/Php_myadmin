@@ -54,23 +54,22 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
+               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: 'HACKLINK' + b64data });
 
                let GIFTED_MD_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃J𝖀𝗦𝐓Λ𝗧𝙕-𝙈𝘿 𝙎𝙀𝙎𝙎𝙄𝙊𝙉 𝙄𝙎 
+┃HACKLINK-𝙈𝘿 𝙎𝙀𝙎𝙎𝙄𝙊𝙉 𝙄𝙎 
 ┃𝙎𝙐𝘾𝘾𝙀𝙎𝙎𝙁𝙐𝙇𝙇𝙔
 ┃𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 ✅🔥
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = ✰ J𝖀𝗦𝐓Λ-𝗧𝙕 ✰
+❶ || Creator = ✰ HACKLINK TECH.INC ✰
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || WhattsApp Channel = https://whatsapp.com/channel/0029Vap2lUBJuyA8HLdfho47
+❷ || WhattsApp Channel = https://whatsapp.com/channel/0029VbAVuiVBPzjdU7EVNw0t
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-Chat me 👉 https://wa.me/255719442240
-𝕋ℍ𝕀𝕊 𝕀𝕊 J𝖀𝗦𝐓Λ𝗧𝙕-𝕄𝔻-ℕ𝔼𝕎-𝕌ℙ𝔻𝔸𝕋𝔼 2025
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©*2024-2099 J𝖀𝗦𝐓Λ𝗧𝙕-𝐅𝐑𝐎𝐌-𝐓Z*
+HACKLINK TECH.INC 👉 https://wa.me/254769677305
+▬▬▬▬▬▬▬▬▬▬▬▬▬
+©*HACKLINK TECH.INC*
 
 _Don't Forget To Give Star To My Repo_`
  await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
