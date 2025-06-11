@@ -2,109 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HANS-MD</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="" type="image/x-icon">
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+      background-color: black;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background-color: black; /* Black bars on top and bottom */
-      color: black; /* Black text color */
-      font-weight: bold; /* Bold font */
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
     }
 
-    .content-wrapper {
+    {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://railway.app",
+            "logo": "https://files.catbox.moe/65fo9l.jpg"
+    }
+
+    .button-container {
       text-align: center;
-      position: relative;
-      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .background-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: auto;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      max-height: 100%;
-      max-width: 100%;
+    h3 {
+      margin-top: -40px;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
     }
 
-    .btn {
-      --color: black; /* Text color inside button */
-      --color2: white; /* Hover text color */
-      width: 200px;
-      padding: 0.8em 1.75em;
-      background-color: orange;
-      border-radius: 6px;
-      border: .3px solid var(--color);
-      transition: .5s;
+    .button {
+      width: 140px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px 15px;
+      background-color: red;
+      border-radius: 10px;
+      border: none;
+      color: white;
       position: relative;
-      overflow: hidden;
       cursor: pointer;
-      z-index: 1;
-      font-weight: bold; /* Bold text inside button */
-      font-size: 17px;
-      font-family: 'Roboto', 'Segoe UI', sans-serif;
-      text-transform: uppercase;
-      color: var(--color);
-      margin-bottom: 24px;
+      font-weight: 900;
+      transition-duration: .2s;
+      background: linear-gradient(0deg, #000, #272727);
+      text-decoration: none;
     }
 
-    .btn::after, .btn::before {
+  
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222; /* Darker gray footer background */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    
+  }
+    .button:before, .button:after {
       content: '';
-      display: block;
-      height: 100%;
-      width: 100%;
-      transform: skew(90deg) translate(-50%, -50%);
       position: absolute;
-      inset: 50%;
-      left: 25%;
+      left: -2px;
+      top: -2px;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
       z-index: -1;
-      transition: .5s ease-out;
-      background-color: var(--color);
+      animation: steam 10s linear infinite;
     }
 
-    .btn::before {
-      top: -50%;
-      left: -25%;
-      transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
     }
 
-    .btn:hover::before {
-      transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+    .button:after {
+      filter: blur(50px);
     }
 
-    .btn:hover::after {
-      transform: skew(45deg) translate(-50%, -50%);
+    .button span {
+      z-index: 1;
     }
 
-    .btn:hover {
-      color: var(--color2);
-    }
-
-    .btn:active {
-      filter: brightness(.7);
-      transform: scale(.98);
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="content-wrapper">
-    <img src="https://files.catbox.moe/ewn1gt.jpg" alt="Background Image" class="background-image">
+  
+div class="button-container">
+    <h3> HACKLINK-XMD SESSION</h3>
     <div>
-      <button onclick="window.open(`/wasiqr`)" class="btn">𝙌𝙍 𝘾𝙊𝘿𝙀</button>
-      <button onclick="window.open(`/pair`)" class="btn">𝙋𝘼𝙄𝙍 𝘾𝙊𝘿𝙀</button>
-      <button onclick="window.open(`https://github.com/JustaTz03/JustaTz-Md`)" class="btn">𝘽𝙊𝙏 𝙍𝙀𝙋𝙊</button>
-      <button onclick="window.open(`https://wa.me/255719442240?text=`)" class="btn">J𝖀𝗦𝐓Λ-𝗧𝙕 𝙈𝙔 𝙉𝙐𝙈𝘽𝙀𝙍</button>
-      <button onclick="window.open(`https://whatsapp.com/channel/0029Vap2lUBJuyA8HLdfho47`)" class="btn">𝙒𝘼 𝘾𝙃𝘼𝙉𝙉𝙀𝙇😎</button>
-      <button onclick="window.open(`https://github.com/JustaTz03`)" class="btn">𝙁𝙊𝙇𝙇𝙊𝙒 𝙈𝙔 𝙂𝙄𝙏𝙃𝙐𝘽</button>
+      <button onclick="window.open(`/wasiqr`)" class="btn">QR-CODE</button>
+      <button onclick="window.open(`/pair`)" class="btn">PAIR-CODE</button>
+      <button onclick="window.open(`https://github.com/VENGEANCE254/HACKLINK-XMD`)" class="btn">HACKLINK-XMD</button>
+      <button onclick="window.open(`https://wa.me/254769677305?text=`)" class="btn">DEVELOPER</button>
+      <button onclick="window.open(`https://whatsapp.com/channel/0029VbAVuiVBPzjdU7EVNw0t`)" class="btn">CHANNEL</button>
+      <button onclick="window.open(`https://github.com/VENGEANCE254`)" class="btn">HACKLINK TECH.INC</button>
     </div>
   </div>
 
